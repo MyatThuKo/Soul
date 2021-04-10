@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BF3189626224A480011AD56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3189526224A480011AD56 /* User.swift */; };
 		E214285026223E7500FA8B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E214284F26223E7500FA8B5E /* GoogleService-Info.plist */; };
 		E2BC5A9D26223C5F0076DD63 /* SoulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */; };
 		E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9E26223C5F0076DD63 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		074796559C53986128B4989B /* Pods_Soul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF3189526224A480011AD56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		697411CA4960AA0F2CCB6FBF /* Pods-Soul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.debug.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.debug.xcconfig"; sourceTree = "<group>"; };
 		96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.release.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.release.xcconfig"; sourceTree = "<group>"; };
 		E214284F26223E7500FA8B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -40,6 +42,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BF31837262245150011AD56 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5BF31891262249B20011AD56 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5BF3189226224A160011AD56 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5BF3189326224A1F0011AD56 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		5BF3189426224A3B0011AD56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BF3189526224A480011AD56 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		83E67D5B1955FDE94D0ABDEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +92,6 @@
 				697411CA4960AA0F2CCB6FBF /* Pods-Soul.debug.xcconfig */,
 				96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,6 +116,11 @@
 		E2BC5A9B26223C5F0076DD63 /* Soul */ = {
 			isa = PBXGroup;
 			children = (
+				5BF3189426224A3B0011AD56 /* Model */,
+				5BF3189326224A1F0011AD56 /* Dashboard */,
+				5BF3189226224A160011AD56 /* Register */,
+				5BF31891262249B20011AD56 /* Login */,
+				5BF31837262245150011AD56 /* Services */,
 				E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */,
 				E2BC5A9E26223C5F0076DD63 /* ContentView.swift */,
 				E2BC5AA026223C600076DD63 /* Assets.xcassets */,
@@ -211,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF3189626224A480011AD56 /* User.swift in Sources */,
 				E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */,
 				E2BC5A9D26223C5F0076DD63 /* SoulApp.swift in Sources */,
 			);
@@ -245,7 +288,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -271,6 +314,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = NO;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -306,7 +350,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -326,6 +370,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,12 +386,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Soul/Preview Content\"";
 				DEVELOPMENT_TEAM = WJC52U7SSP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Soul/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,12 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Soul/Preview Content\"";
 				DEVELOPMENT_TEAM = WJC52U7SSP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Soul/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
