@@ -15,6 +15,7 @@ struct SoulApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(APIServiceManager())
         }
     }
 }
