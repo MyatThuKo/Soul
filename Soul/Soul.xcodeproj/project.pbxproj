@@ -18,9 +18,13 @@
 		5BF318F6262253160011AD56 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF318F5262253160011AD56 /* String+Extension.swift */; };
 		5BF318FD2622571B0011AD56 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF318FC2622571B0011AD56 /* DashboardView.swift */; };
 		5BF31902262257830011AD56 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31901262257830011AD56 /* SettingsView.swift */; };
-		5BF31905262257AD0011AD56 /* JournelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31904262257AD0011AD56 /* JournelingView.swift */; };
+		5BF31905262257AD0011AD56 /* JournalingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31904262257AD0011AD56 /* JournalingView.swift */; };
 		5BF3190A2622583C0011AD56 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF319092622583C0011AD56 /* ChartView.swift */; };
+		5BF31913262269940011AD56 /* JournalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31912262269940011AD56 /* JournalService.swift */; };
+		5BF31916262269B80011AD56 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31915262269B80011AD56 /* Journal.swift */; };
 		E214285026223E7500FA8B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E214284F26223E7500FA8B5E /* GoogleService-Info.plist */; };
+		E27B1B55262275170085E553 /* JournalNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B54262275170085E553 /* JournalNotesView.swift */; };
+		E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B5A262280AA0085E553 /* MoodViews.swift */; };
 		E2BC5A9D26223C5F0076DD63 /* SoulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */; };
 		E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9E26223C5F0076DD63 /* ContentView.swift */; };
 		E2BC5AA126223C600076DD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC5AA026223C600076DD63 /* Assets.xcassets */; };
@@ -41,11 +45,15 @@
 		5BF318F5262253160011AD56 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		5BF318FC2622571B0011AD56 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		5BF31901262257830011AD56 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		5BF31904262257AD0011AD56 /* JournelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournelingView.swift; sourceTree = "<group>"; };
+		5BF31904262257AD0011AD56 /* JournalingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingView.swift; sourceTree = "<group>"; };
 		5BF319092622583C0011AD56 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		5BF31912262269940011AD56 /* JournalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalService.swift; sourceTree = "<group>"; };
+		5BF31915262269B80011AD56 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		697411CA4960AA0F2CCB6FBF /* Pods-Soul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.debug.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.debug.xcconfig"; sourceTree = "<group>"; };
 		96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.release.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.release.xcconfig"; sourceTree = "<group>"; };
 		E214284F26223E7500FA8B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E27B1B54262275170085E553 /* JournalNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNotesView.swift; sourceTree = "<group>"; };
+		E27B1B5A262280AA0085E553 /* MoodViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViews.swift; sourceTree = "<group>"; };
 		E2BC5A9926223C5F0076DD63 /* Soul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulApp.swift; sourceTree = "<group>"; };
 		E2BC5A9E26223C5F0076DD63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,35 +93,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		53E1578126224F22006EE297 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		5BF31837262245150011AD56 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				5BF318CE26224C380011AD56 /* APIServiceManager.swift */,
 				5BF318DF26224C7F0011AD56 /* APIError.swift */,
 				5BF318F1262252DE0011AD56 /* Status.swift */,
+				5BF31912262269940011AD56 /* JournalService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		5BF31891262249B20011AD56 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		5BF3189226224A160011AD56 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		5BF3189326224A1F0011AD56 /* Dashboard */ = {
@@ -128,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF3189526224A480011AD56 /* User.swift */,
+				5BF31915262269B80011AD56 /* Journal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,7 +148,8 @@
 		5BF319002622576D0011AD56 /* Journaling */ = {
 			isa = PBXGroup;
 			children = (
-				5BF31904262257AD0011AD56 /* JournelingView.swift */,
+				5BF31904262257AD0011AD56 /* JournalingView.swift */,
+				E27B1B54262275170085E553 /* JournalNotesView.swift */,
 			);
 			path = Journaling;
 			sourceTree = "<group>";
@@ -189,6 +179,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E27B1B59262280A20085E553 /* Moods */ = {
+			isa = PBXGroup;
+			children = (
+				E27B1B5A262280AA0085E553 /* MoodViews.swift */,
+			);
+			path = Moods;
+			sourceTree = "<group>";
+		};
 		E2BC5A9026223C5F0076DD63 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +208,7 @@
 		E2BC5A9B26223C5F0076DD63 /* Soul */ = {
 			isa = PBXGroup;
 			children = (
+				E27B1B59262280A20085E553 /* Moods */,
 				5BF319082622582B0011AD56 /* ChartView */,
 				5BF319002622576D0011AD56 /* Journaling */,
 				5BF318FF262257670011AD56 /* Settings */,
@@ -217,12 +216,9 @@
 				5BF318E626224DF30011AD56 /* Resources */,
 				5BF3189426224A3B0011AD56 /* Model */,
 				5BF3189326224A1F0011AD56 /* Dashboard */,
-				5BF3189226224A160011AD56 /* Register */,
-				5BF31891262249B20011AD56 /* Login */,
 				5BF31837262245150011AD56 /* Services */,
 				53E1576D26224C7D006EE297 /* App */,
 				53E1576F26224C84006EE297 /* View */,
-				53E1578126224F22006EE297 /* Constants */,
 				E2BC5AA026223C600076DD63 /* Assets.xcassets */,
 				E2BC5AA526223C600076DD63 /* Info.plist */,
 				E214284F26223E7500FA8B5E /* GoogleService-Info.plist */,
@@ -354,18 +350,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27B1B55262275170085E553 /* JournalNotesView.swift in Sources */,
 				5BF318CF26224C380011AD56 /* APIServiceManager.swift in Sources */,
-				5BF31905262257AD0011AD56 /* JournelingView.swift in Sources */,
+				5BF31905262257AD0011AD56 /* JournalingView.swift in Sources */,
 				5BF318FD2622571B0011AD56 /* DashboardView.swift in Sources */,
 				53E1579226226A23006EE297 /* RegisterView.swift in Sources */,
+				5BF31913262269940011AD56 /* JournalService.swift in Sources */,
 				5BF318F6262253160011AD56 /* String+Extension.swift in Sources */,
 				5BF31902262257830011AD56 /* SettingsView.swift in Sources */,
+				E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */,
 				5BF3189626224A480011AD56 /* User.swift in Sources */,
 				53E1578C26225923006EE297 /* TextFieldView.swift in Sources */,
 				E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */,
 				5BF3190A2622583C0011AD56 /* ChartView.swift in Sources */,
 				5BF318E026224C7F0011AD56 /* APIError.swift in Sources */,
 				53E15789262256BB006EE297 /* LoginView.swift in Sources */,
+				5BF31916262269B80011AD56 /* Journal.swift in Sources */,
 				E2BC5A9D26223C5F0076DD63 /* SoulApp.swift in Sources */,
 				5BF318F2262252DE0011AD56 /* Status.swift in Sources */,
 			);
