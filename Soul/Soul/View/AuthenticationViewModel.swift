@@ -10,6 +10,7 @@ import Foundation
 class AuthenticationViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var confirmPassword: String = ""
     @Published var errorMessage: String = ""
     var session: APIServiceManager?
     var loginView: Bool = false
@@ -76,4 +77,5 @@ class AuthenticationViewModel: ObservableObject {
             self?.errorMessage = message
         }
     }
+    
 }

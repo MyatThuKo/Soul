@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5357087926229BFB00F8B765 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357087826229BFB00F8B765 /* Color-Extension.swift */; };
+		5357087926229BFB00F8B765 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357087826229BFB00F8B765 /* Color+Extension.swift */; };
 		5357087C26229D5500F8B765 /* LoginTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357087B26229D5500F8B765 /* LoginTextLabel.swift */; };
 		53E15789262256BB006EE297 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E15788262256BB006EE297 /* LoginView.swift */; };
 		53E1578C26225923006EE297 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1578B26225922006EE297 /* TextFieldView.swift */; };
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		074796559C53986128B4989B /* Pods_Soul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5357087826229BFB00F8B765 /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
+		5357087826229BFB00F8B765 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5357087B26229D5500F8B765 /* LoginTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextLabel.swift; sourceTree = "<group>"; };
 		53E15788262256BB006EE297 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		53E1578B26225922006EE297 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -80,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		535708892622A39000F8B765 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		53E1576D26224C7D006EE297 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF318F5262253160011AD56 /* String+Extension.swift */,
-				5357087826229BFB00F8B765 /* Color-Extension.swift */,
+				5357087826229BFB00F8B765 /* Color+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -228,6 +235,7 @@
 				5BF31837262245150011AD56 /* Services */,
 				53E1576D26224C7D006EE297 /* App */,
 				53E1576F26224C84006EE297 /* View */,
+				535708892622A39000F8B765 /* ModelView */,
 				E2BC5AA026223C600076DD63 /* Assets.xcassets */,
 				E2BC5AA526223C600076DD63 /* Info.plist */,
 				E214284F26223E7500FA8B5E /* GoogleService-Info.plist */,
@@ -368,7 +376,7 @@
 				5BF31913262269940011AD56 /* JournalService.swift in Sources */,
 				5BF318F6262253160011AD56 /* String+Extension.swift in Sources */,
 				5BF31902262257830011AD56 /* SettingsView.swift in Sources */,
-				5357087926229BFB00F8B765 /* Color-Extension.swift in Sources */,
+				5357087926229BFB00F8B765 /* Color+Extension.swift in Sources */,
 				5357087C26229D5500F8B765 /* LoginTextLabel.swift in Sources */,
 				E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */,
 				5BF3189626224A480011AD56 /* User.swift in Sources */,

@@ -34,8 +34,8 @@ struct LoginView: View {
                     
                     // MARK: - TEXT FIELD
                     TextFieldView(
-                        email: $viewModel.email,
-                        password: $viewModel.password
+                        viewModel: viewModel,
+                        isRegistering: true
                     )
                         .padding()
                     

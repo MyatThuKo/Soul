@@ -46,10 +46,7 @@ struct RegisterView: View {
                     Spacer()
                     
                     // MARK: - TEXT FIELD
-                    TextFieldView(
-                        email: $viewModel.email,
-                        password: $viewModel.password
-                    )
+                    TextFieldView(viewModel: viewModel, isRegistering: true)
                     .padding()
                     
                     Spacer()
