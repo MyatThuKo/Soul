@@ -11,7 +11,7 @@ struct JournalNotesView: View {
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject var viewModel: JournalViewModel
-    
+    @EnvironmentObject var session: APIServiceManager
     @State private var titleText = ""
     @State private var noteText = ""
     
@@ -55,7 +55,7 @@ struct JournalNotesView: View {
             .navigationBarTitle("Add New Notes", displayMode: .inline)
             .navigationBarItems(trailing:
                                     Button(action: {
-                                        viewModel.addNewJournal()
+                                        viewModel.addNewJournal(session)
                                         presentationMode.wrappedValue.dismiss()
                                     }, label: {
                                         Image(systemName: "checkmark.circle.fill")
