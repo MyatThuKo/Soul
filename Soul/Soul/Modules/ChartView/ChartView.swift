@@ -10,6 +10,9 @@ import SwiftUICharts
 
 struct ChartView: View {
     // MARK: - PREVIEW
+    let tempData: [Double] = [1, 2, 3, 4, 2, 3, 10]
+    let lineChartTitle: String = "Line Chart Title"
+    let lineChartLegend: String = "Line Chart Legend"
     
     // MARK: - BODY
     var body: some View {
@@ -41,10 +44,7 @@ struct ChartView: View {
                     .padding(.vertical)
                     
                     // GRAPHS
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(width: 338, height: 245, alignment: .center)
-                        .foregroundColor(.white)
-                        .frame(alignment: .center)
+                    LineGraphView(data: tempData, title: lineChartTitle, legend: lineChartLegend)
                     
                     HStack {
                         Text("Placeholder")
@@ -69,6 +69,7 @@ struct ChartView: View {
                 
             }//: ZSTACK
         }//: GEO READER
+    }
 }
 
 // MARK: - PREVIEW
