@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
+// MARK: - STRING
 extension String {
      public func localized(with value: String = "") -> String {
         return String(format: NSLocalizedString(self, comment: "" ), value)

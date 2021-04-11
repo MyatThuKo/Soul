@@ -21,7 +21,11 @@ struct TextFieldView: View {
             Group {
                 TextField("Username, email", text: $email)
                 HStack {
-                    TextField("Password", text: $password)
+                    if isShowingPassword {
+                        TextField("Password", text: $password)
+                    } else {
+                        SecureField("Password", text: $password)
+                    }
                     Spacer()
                     Button(action: {
                         self.isShowingPassword.toggle()
@@ -32,13 +36,13 @@ struct TextFieldView: View {
                     })
                 }
             }
-            .padding()
+            .padding(.vertical, 20)
+            .padding(.horizontal, 15)
             .font(.system(size: 19, weight: .bold, design: .rounded))
             .background(
                 Color(UIColor.tertiarySystemFill)
                     .cornerRadius(13)
             )
-            .frame(height: 60)
         }//: VSTACK
     }
 }
