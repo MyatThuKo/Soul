@@ -34,8 +34,8 @@ struct LoginView: View {
                     
                     // MARK: - TEXT FIELD
                     TextFieldView(
-                        email: $viewModel.email,
-                        password: $viewModel.password
+                        viewModel: viewModel,
+                        isRegisterView: false
                     )
                         .padding()
                     
@@ -56,7 +56,7 @@ struct LoginView: View {
                         }//: HSTACK
                         
                         Button(action: {
-                            viewModel.buttonAction(session: session, register: false)
+                            viewModel.buttonAction(session: session, isRegisterView: false)
                         }, label: {
                             Text("Sign In")
                                 .font(.system(size: 19, weight: .bold, design: .rounded))

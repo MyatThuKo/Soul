@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5357087926229BFB00F8B765 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357087826229BFB00F8B765 /* Color-Extension.swift */; };
+		5357087926229BFB00F8B765 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357087826229BFB00F8B765 /* Color+Extension.swift */; };
 		5357087C26229D5500F8B765 /* LoginTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5357087B26229D5500F8B765 /* LoginTextLabel.swift */; };
 		53E15789262256BB006EE297 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E15788262256BB006EE297 /* LoginView.swift */; };
 		53E1578C26225923006EE297 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E1578B26225922006EE297 /* TextFieldView.swift */; };
@@ -25,6 +25,7 @@
 		5BF31913262269940011AD56 /* JournalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31912262269940011AD56 /* JournalService.swift */; };
 		5BF31916262269B80011AD56 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31915262269B80011AD56 /* Journal.swift */; };
 		5BF3196B262291660011AD56 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3196A262291660011AD56 /* AuthenticationViewModel.swift */; };
+		5BF3197C2622B3E00011AD56 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3197B2622B3E00011AD56 /* PasswordField.swift */; };
 		E214285026223E7500FA8B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E214284F26223E7500FA8B5E /* GoogleService-Info.plist */; };
 		E27B1B55262275170085E553 /* JournalNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B54262275170085E553 /* JournalNotesView.swift */; };
 		E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B5A262280AA0085E553 /* MoodViews.swift */; };
@@ -37,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		074796559C53986128B4989B /* Pods_Soul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5357087826229BFB00F8B765 /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
+		5357087826229BFB00F8B765 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5357087B26229D5500F8B765 /* LoginTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextLabel.swift; sourceTree = "<group>"; };
 		53E15788262256BB006EE297 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		53E1578B26225922006EE297 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		5BF31912262269940011AD56 /* JournalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalService.swift; sourceTree = "<group>"; };
 		5BF31915262269B80011AD56 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		5BF3196A262291660011AD56 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		5BF3197B2622B3E00011AD56 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		697411CA4960AA0F2CCB6FBF /* Pods-Soul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.debug.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.debug.xcconfig"; sourceTree = "<group>"; };
 		96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.release.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.release.xcconfig"; sourceTree = "<group>"; };
 		E214284F26223E7500FA8B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,21 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */,
+				E2BC5A9E26223C5F0076DD63 /* ContentView.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		53E1576F26224C84006EE297 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E2BC5A9E26223C5F0076DD63 /* ContentView.swift */,
-				53E15788262256BB006EE297 /* LoginView.swift */,
-				53E1579126226A23006EE297 /* RegisterView.swift */,
-				53E1578B26225922006EE297 /* TextFieldView.swift */,
-				5357087B26229D5500F8B765 /* LoginTextLabel.swift */,
-				5BF3196A262291660011AD56 /* AuthenticationViewModel.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5BF31837262245150011AD56 /* Services */ = {
@@ -141,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF318F5262253160011AD56 /* String+Extension.swift */,
-				5357087826229BFB00F8B765 /* Color-Extension.swift */,
+				5357087826229BFB00F8B765 /* Color+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,6 +159,19 @@
 				5BF319092622583C0011AD56 /* ChartView.swift */,
 			);
 			path = ChartView;
+			sourceTree = "<group>";
+		};
+		5BF319752622B3320011AD56 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				53E15788262256BB006EE297 /* LoginView.swift */,
+				53E1579126226A23006EE297 /* RegisterView.swift */,
+				53E1578B26225922006EE297 /* TextFieldView.swift */,
+				5357087B26229D5500F8B765 /* LoginTextLabel.swift */,
+				5BF3196A262291660011AD56 /* AuthenticationViewModel.swift */,
+				5BF3197B2622B3E00011AD56 /* PasswordField.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		83E67D5B1955FDE94D0ABDEA /* Frameworks */ = {
@@ -217,6 +220,7 @@
 		E2BC5A9B26223C5F0076DD63 /* Soul */ = {
 			isa = PBXGroup;
 			children = (
+				5BF319752622B3320011AD56 /* Authentication */,
 				E27B1B59262280A20085E553 /* Moods */,
 				5BF319082622582B0011AD56 /* ChartView */,
 				5BF319002622576D0011AD56 /* Journaling */,
@@ -227,7 +231,6 @@
 				5BF3189326224A1F0011AD56 /* Dashboard */,
 				5BF31837262245150011AD56 /* Services */,
 				53E1576D26224C7D006EE297 /* App */,
-				53E1576F26224C84006EE297 /* View */,
 				E2BC5AA026223C600076DD63 /* Assets.xcassets */,
 				E2BC5AA526223C600076DD63 /* Info.plist */,
 				E214284F26223E7500FA8B5E /* GoogleService-Info.plist */,
@@ -368,7 +371,7 @@
 				5BF31913262269940011AD56 /* JournalService.swift in Sources */,
 				5BF318F6262253160011AD56 /* String+Extension.swift in Sources */,
 				5BF31902262257830011AD56 /* SettingsView.swift in Sources */,
-				5357087926229BFB00F8B765 /* Color-Extension.swift in Sources */,
+				5357087926229BFB00F8B765 /* Color+Extension.swift in Sources */,
 				5357087C26229D5500F8B765 /* LoginTextLabel.swift in Sources */,
 				E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */,
 				5BF3189626224A480011AD56 /* User.swift in Sources */,
@@ -380,6 +383,7 @@
 				5BF31916262269B80011AD56 /* Journal.swift in Sources */,
 				E2BC5A9D26223C5F0076DD63 /* SoulApp.swift in Sources */,
 				5BF318F2262252DE0011AD56 /* Status.swift in Sources */,
+				5BF3197C2622B3E00011AD56 /* PasswordField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
