@@ -19,7 +19,7 @@ struct DashboardView: View {
                     .font(.system(size: 12, weight: .light, design: .rounded))
             }
             NavigationView {
-                JournelingView()
+                JournalingView()
             }
             .tabItem {
                 Image(systemName: "person.fill.questionmark")
