@@ -35,6 +35,7 @@
 		E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9E26223C5F0076DD63 /* ContentView.swift */; };
 		E2BC5AA126223C600076DD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC5AA026223C600076DD63 /* Assets.xcassets */; };
 		E2BC5AA426223C600076DD63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC5AA326223C600076DD63 /* Preview Assets.xcassets */; };
+		E2CE6A082623227C00B0B557 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE6A072623227C00B0B557 /* CalendarView.swift */; };
 		E39D90517BB7A517D40CAC3D /* Pods_Soul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074796559C53986128B4989B /* Pods_Soul.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		E2BC5AA026223C600076DD63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2BC5AA326223C600076DD63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2BC5AA526223C600076DD63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CE6A072623227C00B0B557 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		5BF319852622B8090011AD56 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE6A062623225D00B0B557 /* Calendar */,
 				5BF319752622B3320011AD56 /* Authentication */,
 				5BF3189326224A1F0011AD56 /* Dashboard */,
 				5BF319082622582B0011AD56 /* ChartView */,
@@ -251,6 +254,14 @@
 				E2BC5AA326223C600076DD63 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2CE6A062623225D00B0B557 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE6A072623227C00B0B557 /* CalendarView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +384,7 @@
 				5BF3196B262291660011AD56 /* AuthenticationViewModel.swift in Sources */,
 				5BF31905262257AD0011AD56 /* JournalingView.swift in Sources */,
 				5BF318FD2622571B0011AD56 /* DashboardView.swift in Sources */,
+				E2CE6A082623227C00B0B557 /* CalendarView.swift in Sources */,
 				53E1579226226A23006EE297 /* RegisterView.swift in Sources */,
 				5BF31913262269940011AD56 /* JournalService.swift in Sources */,
 				5BF318F6262253160011AD56 /* String+Extension.swift in Sources */,

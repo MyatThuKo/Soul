@@ -15,6 +15,8 @@ struct JournalNotesView: View {
     @State private var titleText = ""
     @State private var noteText = ""
     
+    @State private var showCalendar = false
+    
     init(_ viewModel: JournalViewModel) {
         UITextView.appearance().backgroundColor = .clear
         self.viewModel = viewModel
@@ -49,6 +51,15 @@ struct JournalNotesView: View {
                 VStack {
                     Text("How are you today?")
                     MoodViews(viewModel: viewModel)
+                }
+                
+                VStack {
+                    Button("Today's Date", action: {
+                        self.showCalendar.toggle()
+                    })
+                    .sheet(isPresented: $showCalendar) {
+                        CalendarView()
+                    }
                 }
                 
                 Spacer()
