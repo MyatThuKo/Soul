@@ -8,18 +8,17 @@
 import Foundation
 
 class JournalViewModel: ObservableObject {
-    @Published var journals: [Journal] = []
+    @Published var journals: [Journal] = [Journal.default]
     @Published var errorMessage: String = ""
     @Published var titleText = ""
     @Published var noteText = ""
     @Published var mood = ""
     var moodArray = ["excellent", "happy", "good", "sad", "awful"]
     var moodDict = ["excellent": 10, "happy": 6, "good": 4, "sad": 2, "awful": 0]
-    
-    var session: APIServiceManager?
     var journalService = JournalService()
     
     func fetchJournals(_ session: APIServiceManager) {
+        journals = []
         guard let user = session.user else {
             return
         }
@@ -45,5 +44,9 @@ class JournalViewModel: ObservableObject {
             }
             self.errorMessage = error.localizedDescription
         }
+    }
+    
+    func deleteItem(at offsets: IndexSet ) {
+        
     }
 }

@@ -24,7 +24,7 @@ struct SettingsView: View {
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.5), radius: 8, x: 0.0, y: 0.0)
                     .padding()
                 
-                Text("Joe")
+                Text(session.user?.userName ?? "Joe")
                     .font(.system(size: 44, weight: .heavy, design: .rounded))
                 
                 VStack(spacing: 7) {
@@ -48,6 +48,9 @@ struct SettingsView: View {
                                     .font(.system(size: 21, weight: .bold, design: .rounded))
                                 Text("Log out")
                                     .font(.system(size: 18, weight: .semibold, design: .rounded))
+                                    .onTapGesture { 
+                                       session.logout()
+                                    }
                                 Spacer()
                             }//: HSTACK
                         }
@@ -59,16 +62,6 @@ struct SettingsView: View {
                 
                 Spacer()
             }//: VSTACK
-            
-            
-            
-//            List {
-//                Label("Signout", systemImage: "power")
-//                    .onTapGesture {
-//                        session.logout()
-//                    }
-//            }
-//            .listStyle(SidebarListStyle())
             .navigationTitle("Settings")
         }
     }

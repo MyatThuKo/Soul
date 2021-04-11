@@ -17,12 +17,11 @@ class APIServiceManager: ObservableObject {
     // MARK: Functions
     func getUser() {
         if let user = Auth.auth().currentUser,
-           let email = user.email,
-           let displayName = user.displayName {
+           let email = user.email {
             self.user = User(
                 uid: user.uid,
                 email: email,
-                userName: displayName
+                userName: user.displayName ?? "Joe"
             )
             self.isLoggedIn = true
         } else {
@@ -33,24 +32,13 @@ class APIServiceManager: ObservableObject {
 
     func login(email: String, password: String, handler: @escaping(Result<Bool, APIError>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { response, error in
-            if let user = response?.user,
-               let email = user.email {
-                self.user = User(uid: user.uid, email: email, userName: user.displayName ?? "")
-                self.isLoggedIn = true
-                handler(.success(true))
+            if let error = error {
+                self.loginErrorHandling(error, handler: handler)
             } else {
-                self.isLoggedIn = false
-                if let error = error, let errCode = Status(rawValue: error._code) {
-                    switch errCode {
-                    case .authErrorCodeWrongPassword:
-                        handler(.failure(.wrongPassword(message: error.localizedDescription)))
-                    case .authErrorCodeInvalidCredential:
-                        handler(.failure(.wrongEmailOrPassword))
-                    default:
-                        handler(.failure(.genericError(error: error)))
-                    }
-                }
+                self.getUser()
+                handler(.success(true))
             }
+       
         }
     }
 
@@ -64,25 +52,31 @@ class APIServiceManager: ObservableObject {
         }
     }
 
-    func register(email: String, password: String, handler: @escaping(Result<Bool, APIError>) -> Void) {
+    func register(email: String, password: String, displayName: String = "", handler: @escaping(Result<Bool, APIError>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { response, error in
-            if let user = response?.user,
-               let email = user.email {
-                self.user = User(uid: user.uid, email: email, userName: user.displayName ?? "")
-                self.isLoggedIn = true
-                handler(.success(true))
+            if let error = error {
+                self.loginErrorHandling(error, handler: handler)
             } else {
-                self.isLoggedIn = false
-                if let error = error, let errCode = Status(rawValue: error._code) {
-                    switch errCode {
-                    case .authErrorCodeWrongPassword:
-                        handler(.failure(.wrongPassword(message: error.localizedDescription)))
-                    case .authErrorCodeInvalidCredential:
-                        handler(.failure(.wrongEmailOrPassword))
-                    default:
-                        handler(.failure(.genericError(error: error)))
-                    }
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = displayName
+                changeRequest?.commitChanges { error in
+                    self.getUser()
+                    handler(.success(true))
                 }
+            }
+        }
+    }
+    
+    func loginErrorHandling(_ error: Error?, handler: @escaping(Result<Bool, APIError>) -> Void) {
+        self.isLoggedIn = false
+        if let error = error, let errCode = Status(rawValue: error._code) {
+            switch errCode {
+            case .authErrorCodeWrongPassword:
+                handler(.failure(.wrongPassword(message: error.localizedDescription)))
+            case .authErrorCodeInvalidCredential:
+                handler(.failure(.wrongEmailOrPassword))
+            default:
+                handler(.failure(.genericError(error: error)))
             }
         }
     }

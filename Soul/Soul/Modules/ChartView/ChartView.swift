@@ -14,6 +14,7 @@ struct ChartView: View {
     let lineChartTitle: String = "Line Chart Title"
     let lineChartLegend: String = "Line Chart Legend"
     
+    @EnvironmentObject var session: APIServiceManager
     // MARK: - BODY
     var body: some View {
         GeometryReader { geometry in
@@ -34,7 +35,7 @@ struct ChartView: View {
                 VStack {
                     // GREETING MESSAGE
                     HStack {
-                        Text("Hey, Soul")
+                        Text("Hey, \(session.user?.userName ?? "Joe")")
                             .font(.system(size: 42, weight: .heavy, design: .rounded))
                             .foregroundColor(Color(#colorLiteral(red: 0.09700327367, green: 0.1035419181, blue: 0.09760505706, alpha: 1)))
                             .padding(.horizontal, 20)

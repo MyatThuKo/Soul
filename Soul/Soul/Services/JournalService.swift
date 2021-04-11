@@ -43,7 +43,7 @@ class JournalService {
     
     // MARK: - Delete Journal
     
-    func deleteJournal(for journal: Journal, handler:  @escaping(Error?) -> Void) {
+    func delete(_ journal: Journal, handler:  @escaping(Error?) -> Void) {
         databaseJournalReference
             .child(journal.userId)
             .child("\(journal.uuid)")
