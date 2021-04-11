@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct DashboardView: View {
+    
     var body: some View {
         TabView {
             ChartView()
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
-                    Text("Quiz")
+                    Text("Chart")
                         .font(.system(size: 12, weight: .light, design: .rounded))
                 }
             JournalingView()
                 .tabItem {
                     Image(systemName: "person.fill.questionmark")
-                    Text("Quiz")
+                    Text("Journal")
                         .font(.system(size: 12, weight: .light, design: .rounded))
                 }
             SettingsView()
@@ -28,9 +29,7 @@ struct DashboardView: View {
                     Text("Settings")
                         .font(.system(size: 12, weight: .light, design: .rounded))
                 }
-            
         }
-        
     }
 }
 
