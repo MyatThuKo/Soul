@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Journal: Decodable {
+struct Journal: Decodable, Hashable {
     var uuid: String = UUID().uuidString
     var userId: String
     var title: String
@@ -17,7 +17,7 @@ struct Journal: Decodable {
     
     static let `default`  = Self(
         uuid: UUID().uuidString,
-        userId: "sk0ATulSibZSPts0eSsznzFzcR13",
+        userId: "test",
         title: "Test",
         note: "TestNote",
         date: "",

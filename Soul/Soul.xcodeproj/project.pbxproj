@@ -26,6 +26,8 @@
 		5BF31916262269B80011AD56 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF31915262269B80011AD56 /* Journal.swift */; };
 		5BF3196B262291660011AD56 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3196A262291660011AD56 /* AuthenticationViewModel.swift */; };
 		5BF3197C2622B3E00011AD56 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3197B2622B3E00011AD56 /* PasswordField.swift */; };
+		5BF319882622B8EB0011AD56 /* JournalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF319872622B8EB0011AD56 /* JournalListView.swift */; };
+		5BF3198B2622B95B0011AD56 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF3198A2622B95B0011AD56 /* JournalViewModel.swift */; };
 		E214285026223E7500FA8B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E214284F26223E7500FA8B5E /* GoogleService-Info.plist */; };
 		E27B1B55262275170085E553 /* JournalNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B54262275170085E553 /* JournalNotesView.swift */; };
 		E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B5A262280AA0085E553 /* MoodViews.swift */; };
@@ -57,6 +59,8 @@
 		5BF31915262269B80011AD56 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		5BF3196A262291660011AD56 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		5BF3197B2622B3E00011AD56 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		5BF319872622B8EB0011AD56 /* JournalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListView.swift; sourceTree = "<group>"; };
+		5BF3198A2622B95B0011AD56 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		697411CA4960AA0F2CCB6FBF /* Pods-Soul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.debug.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.debug.xcconfig"; sourceTree = "<group>"; };
 		96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.release.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.release.xcconfig"; sourceTree = "<group>"; };
 		E214284F26223E7500FA8B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -147,8 +151,11 @@
 		5BF319002622576D0011AD56 /* Journaling */ = {
 			isa = PBXGroup;
 			children = (
+				E27B1B5A262280AA0085E553 /* MoodViews.swift */,
 				5BF31904262257AD0011AD56 /* JournalingView.swift */,
 				E27B1B54262275170085E553 /* JournalNotesView.swift */,
+				5BF319872622B8EB0011AD56 /* JournalListView.swift */,
+				5BF3198A2622B95B0011AD56 /* JournalViewModel.swift */,
 			);
 			path = Journaling;
 			sourceTree = "<group>";
@@ -174,6 +181,18 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		5BF319852622B8090011AD56 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5BF319752622B3320011AD56 /* Authentication */,
+				5BF3189326224A1F0011AD56 /* Dashboard */,
+				5BF319082622582B0011AD56 /* ChartView */,
+				5BF319002622576D0011AD56 /* Journaling */,
+				5BF318FF262257670011AD56 /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		83E67D5B1955FDE94D0ABDEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,14 +208,6 @@
 				96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E27B1B59262280A20085E553 /* Moods */ = {
-			isa = PBXGroup;
-			children = (
-				E27B1B5A262280AA0085E553 /* MoodViews.swift */,
-			);
-			path = Moods;
 			sourceTree = "<group>";
 		};
 		E2BC5A9026223C5F0076DD63 = {
@@ -220,17 +231,12 @@
 		E2BC5A9B26223C5F0076DD63 /* Soul */ = {
 			isa = PBXGroup;
 			children = (
-				5BF319752622B3320011AD56 /* Authentication */,
-				E27B1B59262280A20085E553 /* Moods */,
-				5BF319082622582B0011AD56 /* ChartView */,
-				5BF319002622576D0011AD56 /* Journaling */,
-				5BF318FF262257670011AD56 /* Settings */,
+				53E1576D26224C7D006EE297 /* App */,
+				5BF319852622B8090011AD56 /* Modules */,
 				5BF318F4262252F20011AD56 /* Utils */,
 				5BF318E626224DF30011AD56 /* Resources */,
 				5BF3189426224A3B0011AD56 /* Model */,
-				5BF3189326224A1F0011AD56 /* Dashboard */,
 				5BF31837262245150011AD56 /* Services */,
-				53E1576D26224C7D006EE297 /* App */,
 				E2BC5AA026223C600076DD63 /* Assets.xcassets */,
 				E2BC5AA526223C600076DD63 /* Info.plist */,
 				E214284F26223E7500FA8B5E /* GoogleService-Info.plist */,
@@ -370,6 +376,8 @@
 				53E1579226226A23006EE297 /* RegisterView.swift in Sources */,
 				5BF31913262269940011AD56 /* JournalService.swift in Sources */,
 				5BF318F6262253160011AD56 /* String+Extension.swift in Sources */,
+				5BF3198B2622B95B0011AD56 /* JournalViewModel.swift in Sources */,
+				5BF319882622B8EB0011AD56 /* JournalListView.swift in Sources */,
 				5BF31902262257830011AD56 /* SettingsView.swift in Sources */,
 				5357087926229BFB00F8B765 /* Color+Extension.swift in Sources */,
 				5357087C26229D5500F8B765 /* LoginTextLabel.swift in Sources */,
@@ -452,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = NO;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -508,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
