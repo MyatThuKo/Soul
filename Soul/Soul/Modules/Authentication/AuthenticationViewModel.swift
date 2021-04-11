@@ -16,6 +16,9 @@ class AuthenticationViewModel: ObservableObject {
     var session: APIServiceManager?
     var loginView: Bool = false
     private var isRegisterView = false
+    
+    // MARK: - METHODS
+    
     func buttonAction(session: APIServiceManager, isRegisterView: Bool) {
         self.isRegisterView = isRegisterView
         self.session = session

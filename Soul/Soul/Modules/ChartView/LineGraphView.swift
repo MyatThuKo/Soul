@@ -14,7 +14,7 @@ struct LineGraphView: View {
     let title: String
     let legend: String
     
-    let chartStyle = ChartStyle(backgroundColor: Color.white, accentColor: Color.black, gradientColor: GradientColors.prplNeon, textColor: Color.black, legendTextColor: Color.black, dropShadowColor: Color.black)
+    let chartStyle = ChartStyle(backgroundColor: Color.white, accentColor: Color.black, gradientColor: GradientColors.prplNeon, textColor: Color.black, legendTextColor: Color.black, dropShadowColor: Color(red: 0, green: 0, blue: 0, opacity: 0.6))
     
     // MARK: - BODY
     var body: some View {
