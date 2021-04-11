@@ -37,7 +37,7 @@ struct LoginView: View {
                         viewModel: viewModel,
                         isRegisterView: false
                     )
-                        .padding()
+                    .padding()
                     
                     Spacer()
                     

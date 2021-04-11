@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct ChartView: View {
     // MARK: - PREVIEW
@@ -68,7 +69,6 @@ struct ChartView: View {
                 
             }//: ZSTACK
         }//: GEO READER
-    }
 }
 
 // MARK: - PREVIEW
