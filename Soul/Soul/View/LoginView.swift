@@ -26,7 +26,8 @@ struct LoginView: View {
                         Text("Welcome back.\nYou've been missed!")
                             .font(.system(size: 30, weight: .semibold, design: .rounded))
                     }//: VSTACK
-                    .padding()
+                    .padding(.top, 40)
+                    .padding(.bottom, 20)
                     .offset(x: -25)
                     
                     Spacer()
@@ -68,6 +69,7 @@ struct LoginView: View {
                 }//: VSTACK
             }//: ZSTACK
             .navigationBarHidden(true)
+            .navigationViewStyle(StackNavigationViewStyle())
         }//: NAVIGATION
     }
 }

@@ -18,7 +18,7 @@ struct RegisterView: View {
     // MARK: - BODY
     var body: some View {
             ZStack(alignment: .leading) {
-                Color("background-color")
+                Color.background
                     .ignoresSafeArea(.all)
                 VStack {
                     // MARK: - HEAD
@@ -27,7 +27,7 @@ struct RegisterView: View {
                             self.presentation.wrappedValue.dismiss()
                         }, label: {
                             Image(systemName: "chevron.left")
-                                .font(.title)
+                                .font(.system(size: 24, weight: .bold, design: .rounded))
                                 .foregroundColor(Color("foreground-color"))
                         })
                         Spacer()

@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var session: APIServiceManager
     var body: some View {
-//        if session.isLoggedIn {
-//            DashboardView()
-//        } else {
-//            LoginView()
-//        }
-        DashboardView() 
+        if session.isLoggedIn {
+            DashboardView()
+        } else {
+            LoginView()
+        }
+//        DashboardView()
     }
 }
 
