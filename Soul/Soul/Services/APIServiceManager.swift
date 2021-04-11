@@ -12,7 +12,7 @@ class APIServiceManager: ObservableObject {
 
     // MARK: Properties
     @Published var user: User?
-    @Published var isLoggedIn: Bool =  true //Auth.auth().currentUser != nil
+    @Published var isLoggedIn: Bool = Auth.auth().currentUser != nil
     
     // MARK: Functions
     func getUser() {

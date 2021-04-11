@@ -13,12 +13,12 @@ struct ContentView: View {
         if session.isLoggedIn {
             DashboardView()
         } else {
-            Text("Hello, world!")
-                .padding()
+            LoginView()
         }
     }
 }
 
+// MARK: - PREVIEW
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
