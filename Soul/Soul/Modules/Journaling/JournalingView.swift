@@ -45,7 +45,12 @@ struct JournalingView: View {
 // MARK: - PREVIEW
 struct JournelingView_Previews: PreviewProvider {
     static var previews: some View {
-        JournalingView()
-            .environmentObject(APIServiceManager())
+        Group {
+            JournalingView()
+                .environmentObject(APIServiceManager())
+            JournalingView()
+                .preferredColorScheme(.dark)
+                .environmentObject(APIServiceManager())
+        }
     }
 }

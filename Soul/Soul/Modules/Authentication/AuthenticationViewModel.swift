@@ -12,6 +12,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
     @Published var errorMessage: String = ""
+    @Published var userName: String = ""
     var session: APIServiceManager?
     var loginView: Bool = false
     private var isRegisterView = false
@@ -55,8 +56,9 @@ class AuthenticationViewModel: ObservableObject {
                 self.updateErrorMessage(error.debugDescription)
             }
         }
-        self.session?.register(email: self.email,
-                              password: self.password,
+       session?.register(email: email,
+                              password: password,
+                              displayName: userName,
                               handler: profileUpdateHandler)
     }
     

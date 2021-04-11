@@ -18,7 +18,7 @@ struct TextFieldView: View {
     var body: some View {
         VStack(spacing: 20) {
             Group {
-                TextField("Username, email", text: $viewModel.email)
+                TextField("Email", text: $viewModel.email)
                     .autocapitalization(UITextAutocapitalizationType.none)
                     .disableAutocorrection(true)
                 
@@ -32,6 +32,7 @@ struct TextFieldView: View {
                         "Confirm Password",
                         text: $viewModel.confirmPassword
                     )
+                    TextField("Username", text: $viewModel.userName)
                 }
             }
             .padding(.vertical, 20)
@@ -41,6 +42,12 @@ struct TextFieldView: View {
                 Color(UIColor.tertiarySystemFill)
                     .cornerRadius(13)
             )
+            if !viewModel.errorMessage.isEmpty {
+                Text(viewModel.errorMessage)
+                    .font(.system(size: 14, weight: .light, design: .rounded))
+                    .foregroundColor(.red)
+                    .padding(.horizontal, 15)
+            }
         }//: VSTACK
     }
 }
