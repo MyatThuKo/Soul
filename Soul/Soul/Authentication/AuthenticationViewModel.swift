@@ -14,13 +14,14 @@ class AuthenticationViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     var session: APIServiceManager?
     var loginView: Bool = false
-    
-    func buttonAction(session: APIServiceManager, register: Bool) {
+    private var isRegisterView = false
+    func buttonAction(session: APIServiceManager, isRegisterView: Bool) {
+        self.isRegisterView = isRegisterView
         self.session = session
         guard validateFields() else {
             return
         }
-        if register {
+        if isRegisterView {
             registerUser()
         } else {
             loginUser()
@@ -60,12 +61,18 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     func validateFields() -> Bool {
+        
         guard !email.isEmpty, !password.isEmpty else {
             updateErrorMessage(APIError.allFieldsManditory.debugDescription)
             return false
         }
         guard email.isValidEmail else {
             updateErrorMessage(APIError.invalidEmail.debugDescription)
+            return false
+        }
+        
+        if !confirmPassword.isEmpty, password != confirmPassword  {
+            updateErrorMessage(APIError.passwordNotMatching.debugDescription)
             return false
         }
 

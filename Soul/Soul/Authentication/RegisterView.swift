@@ -46,7 +46,7 @@ struct RegisterView: View {
                     Spacer()
                     
                     // MARK: - TEXT FIELD
-                    TextFieldView(viewModel: viewModel, isRegistering: true)
+                    TextFieldView(viewModel: viewModel, isRegisterView: true)
                     .padding()
                     
                     Spacer()
@@ -61,7 +61,7 @@ struct RegisterView: View {
                         .foregroundColor(Color("background-color"))
                         
                         Button(action: {
-                            viewModel.buttonAction(session: session, register: true)
+                            viewModel.buttonAction(session: session, isRegisterView: true)
                         }, label: {
                             Text("Create Account")
                                 .font(.system(size: 19, weight: .bold, design: .rounded))
