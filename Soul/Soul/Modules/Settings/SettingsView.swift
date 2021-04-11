@@ -11,13 +11,22 @@ struct SettingsView: View {
     @EnvironmentObject var session: APIServiceManager
     var body: some View {
         NavigationView {
-            List {
-                Label("Signout", systemImage: "power")
-                    .onTapGesture {
-                        session.logout()
-                    }
+            Form {
+                HStack {
+                    Image(systemName: "power")
+                    Spacer()
+                    Text("Logout")
+                }
+                Text("two")
+                
             }
-            .listStyle(SidebarListStyle())
+//            List {
+//                Label("Signout", systemImage: "power")
+//                    .onTapGesture {
+//                        session.logout()
+//                    }
+//            }
+//            .listStyle(SidebarListStyle())
             .navigationTitle("Settings")
         }
     }

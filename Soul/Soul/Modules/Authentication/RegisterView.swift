@@ -9,10 +9,10 @@ import SwiftUI
 
 struct RegisterView: View {
     // MARK: - PROPERTIES
-    
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var session: APIServiceManager
     @ObservedObject var viewModel = AuthenticationViewModel()
+    
     // MARK: - BODY
     var body: some View {
             ZStack(alignment: .leading) {
