@@ -41,13 +41,12 @@ class JournalViewModel: ObservableObject {
             return
         }
         
-        let moodValue = moodDict[mood] ?? 0
         let newJournal = Journal(
             userId: user.uid,
             title: titleText,
             note: noteText,
             date: dateText,
-            mood: moodValue
+            mood: mood
         )
         journalService.createJournal(journal: newJournal) { [weak self] error in
             guard let self = self else {

@@ -53,7 +53,7 @@ struct JournalListView: View {
                                     .foregroundColor(Color.black)
                                     .padding(.horizontal, 30)
                                     .padding(.bottom, 5)
-                                Text(viewModel.moodArray[viewModel.journals[index].mood])
+                                Text(viewModel.journals[index].mood)
                                     .font(.system(size: 15, weight: .bold, design: .rounded))
                                     .foregroundColor(Color.black)
                                     .padding(.horizontal, 30)

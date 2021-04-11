@@ -13,7 +13,7 @@ struct Journal: Decodable, Hashable {
     var title: String
     var note: String
     var date: String
-    var mood: Int
+    var mood: String
     
     static let `default`  = Self(
         uuid: UUID().uuidString,
@@ -21,7 +21,7 @@ struct Journal: Decodable, Hashable {
         title: "Test",
         note: "TestNote",
         date: "April 15, 2021",
-        mood: 3)
+        mood: "excellent")
     
     func getJournalDictionary() -> [String: Any] {
         return [
