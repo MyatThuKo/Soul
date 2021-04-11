@@ -20,7 +20,7 @@ struct Journal: Decodable, Hashable {
         userId: "test",
         title: "Test",
         note: "TestNote",
-        date: "",
+        date: "April 15, 2021",
         mood: 3)
     
     func getJournalDictionary() -> [String: Any] {

@@ -10,23 +10,16 @@ import SwiftUI
 struct CalendarView: View {
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) private var presentationMode
-    
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }()
-    
-    @State private var date = Date()
+    @ObservedObject var viewModel: JournalViewModel
     
     // MARK: - BODY
     var body: some View {
         NavigationView {
             VStack {
-                DatePicker("Today's Date is", selection: $date, in: ...Date())
+                DatePicker("Today's Date is", selection: $viewModel.date, in: ...Date())
                     .datePickerStyle(GraphicalDatePickerStyle())
                 
-                Text("Today's Date is \(date, formatter: dateFormatter)...")
+                Text("Journal for \(viewModel.dateText)")
             } //: VStack
             .navigationBarItems(trailing: Button(action: {
                 presentationMode.wrappedValue.dismiss()
@@ -44,7 +37,7 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarView(viewModel: JournalViewModel())
             .previewLayout(.sizeThatFits)
             .padding()
     }

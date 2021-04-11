@@ -51,17 +51,24 @@ struct JournalNotesView: View {
                 .padding(.horizontal, 22)
                 .padding(.vertical, 14)
                 
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .font(.system(size: 14, weight: .light, design: .rounded))
+                        .foregroundColor(.red)
+                        .padding([.horizontal, .vertical], 15)
+                }
+                
                 VStack {
                     Text("How are you today?")
                     MoodViews(viewModel: viewModel)
                 }
                 
                 VStack {
-                    Button("Today's Date", action: {
+                    Button("For Date \(viewModel.dateText)", action: {
                         self.showCalendar.toggle()
                     })
                     .sheet(isPresented: $showCalendar) {
-                        CalendarView()
+                        CalendarView(viewModel: viewModel)
                             .padding(20)
 //                            .accentColor(.orange)
                     }
@@ -73,7 +80,9 @@ struct JournalNotesView: View {
             .navigationBarItems(trailing:
                                     Button(action: {
                                         viewModel.addNewJournal(session)
-                                        presentationMode.wrappedValue.dismiss()
+                                        if viewModel.errorMessage.isEmpty {
+                                            presentationMode.wrappedValue.dismiss()
+                                        }
                                     }, label: {
                                         Image(systemName: "checkmark.circle.fill")
                                             .resizable()

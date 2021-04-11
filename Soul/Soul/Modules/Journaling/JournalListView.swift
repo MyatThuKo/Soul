@@ -24,38 +24,54 @@ struct JournalListView: View {
     
     var journalList: some View {
         ScrollView {
-            ForEach(viewModel.journals, id: \.self) { journals in
-                showUserResultViewContent(journals)
+            ForEach(viewModel.journals.indices, id: \.self) { i in
+                showUserResultViewContent(i)
                     .background(Color.white)
                     .cornerRadius(15)
                     .padding(.all, 10)
             }
-            .onDelete(perform: viewModel.deleteItem)
             .background(Color.background)
             .frame(maxWidth: .infinity)
-        }        
+        }
+        .background(Color.background)
+        .frame(maxWidth: .infinity)
     }
     
-    func showUserResultViewContent(_ journal: Journal) -> AnyView {
+    func showUserResultViewContent(_ index: Int) -> AnyView {
         return AnyView(
             VStack {
-                Button(action: {
-                }) {
-                    HStack {
-                        VStack {
-                            Text(journal.title)
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .foregroundColor(Color.black)
-                                .padding(.horizontal, 30)
-                            Text(journal.note)
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .foregroundColor(Color.black)
-                                .padding(.horizontal, 30)
+                    Button(action: {
+                    }) {
+                        HStack {
+                            VStack {
+                                Text(viewModel.journals[index].title)
+                                    .font(.system(size: 24, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color.black)
+                                    .padding(.horizontal, 30)
+                                Text(viewModel.journals[index].note)
+                                    .font(.system(size: 24, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color.black)
+                                    .padding(.horizontal, 30)
+                                    .padding(.bottom, 5)
+                                Text(viewModel.moodArray[viewModel.journals[index].mood])
+                                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color.black)
+                                    .padding(.horizontal, 30)
+                                Text(viewModel.journals[index].date)
+                                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color.black)
+                                    .padding(.horizontal, 30)
+                            }
+                            .padding(.vertical, 10)
+                            .frame(maxWidth: .infinity)
+                            Button(action: { viewModel.delete(index: index) }) {
+                                Image(systemName: "trash")
+                                    .foregroundColor(.red)
+                            }
+                            .padding()
                         }
-                        .padding(.vertical, 30)
                     }
-                }
-                .padding(5)
+                   
             }
             .frame(maxWidth: .infinity)
         )
