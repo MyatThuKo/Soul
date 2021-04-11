@@ -13,7 +13,7 @@ class JournalService {
     
     // MARK: - Fetch all journals for a user
     
-    func fetchMyJournels(userId: String, handler: @escaping ([Journal]?, Error?) -> Void) {
+    func fetchMyJournels(userId: String, handler: @escaping ([String: Journal]?, Error?) -> Void) {
         databaseJournalReference
             .child(userId)
             .observeSingleEvent(of: .value, with: { snapshot in
@@ -21,8 +21,8 @@ class JournalService {
                 return
            }
            do {
-               let questionsSet = try FirebaseDecoder().decode([Journal].self, from: value)
-                handler(questionsSet, nil)
+            let journalSet = try FirebaseDecoder().decode([String: Journal].self, from: value)
+                handler(journalSet, nil)
            } catch let error {
                handler(nil, error)
            }
@@ -43,8 +43,11 @@ class JournalService {
     
     // MARK: - Delete Journal
     
-    func deleteJournal(for pin: String, handler:  @escaping(Error?) -> Void) {
-        databaseJournalReference.child(pin).removeValue { (error: Error?, ref: DatabaseReference) in
+    func deleteJournal(for journal: Journal, handler:  @escaping(Error?) -> Void) {
+        databaseJournalReference
+            .child(journal.userId)
+            .child("\(journal.uuid)")
+            .removeValue { (error: Error?, ref: DatabaseReference) in
            handler(error)
         }
     }

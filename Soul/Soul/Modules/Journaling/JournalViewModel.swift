@@ -23,16 +23,17 @@ class JournalViewModel: ObservableObject {
         guard let user = session.user else {
             return
         }
-        journalService.fetchMyJournels(userId: user.uid) { [weak self] journals, error in
-            guard let self = self, let journals = journals else {
+        journalService.fetchMyJournels(userId: user.uid) { [weak self] journalsDict, error in
+            guard let self = self,
+                  let journalsArray = journalsDict?.values.map({$0}) else {
                 return
             }
-            self.journals = journals
+            self.journals = journalsArray
         }
     }
     
-    func addNewJournal() {
-        guard let user = session?.user else {
+    func addNewJournal(_ session: APIServiceManager) {
+        guard let user = session.user else {
             return
         }
         let currentDate = Date().timeIntervalSince1970.description
