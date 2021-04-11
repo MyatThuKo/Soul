@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct ChartView: View {
+    // MARK: - PROPERTIES
+    let data: [Double]
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LineView(data: data, title: "LineView")
     }
 }
 
+// MARK: - PREVIEW
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartView()
+        ChartView(data: [23, 1, 2, 3, 43, 20])
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }

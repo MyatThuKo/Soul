@@ -23,7 +23,11 @@ struct JournalingView: View {
                 .navigationBarItems(trailing: Button(action: {
                         addJournal.toggle()
                     }, label: {
-                        Text("Add")
+                        Image(systemName: "note.text.badge.plus")
+                            .resizable()
+                            .frame(width: 25, height: 25, alignment: .center)
+                            .foregroundColor(.green)
+                            .opacity(0.7)
                     }
                 )
                 .sheet(isPresented: $addJournal) {
@@ -33,6 +37,7 @@ struct JournalingView: View {
                 .onAppear {
                     viewModel.fetchJournals(session)
                 }
+                .navigationBarTitle(Text("Journals"), displayMode: .inline)
         }
     }
 }

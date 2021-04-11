@@ -11,7 +11,7 @@ struct DashboardView: View {
     
     var body: some View {
         TabView {
-            ChartView()
+            ChartView(data: [2, 21, 10, 15, 7])
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                     Text("Chart")

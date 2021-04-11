@@ -19,6 +19,8 @@ struct TextFieldView: View {
         VStack(spacing: 20) {
             Group {
                 TextField("Username, email", text: $viewModel.email)
+                    .autocapitalization(UITextAutocapitalizationType.none)
+                    .disableAutocorrection(true)
                 
                 PasswordField(
                     "Password",
