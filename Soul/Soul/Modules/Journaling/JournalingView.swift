@@ -13,20 +13,26 @@ struct JournalingView: View {
     @State private var showFullTextField = false
     
     @State private var addJournal = false
+    @EnvironmentObject var session: APIServiceManager
+    @ObservedObject var viewModel = JournalViewModel()
     
     // MARK: - BODY
     var body: some View {
         NavigationView {
-            Text("Journaling view")
+            JournalListView(viewModel: viewModel)
                 .navigationBarItems(trailing: Button(action: {
-                    addJournal.toggle()
-                }, label: {
-                    Text("Add")
-                })
-                .sheet(isPresented: $addJournal) {
-                    JournalNotesView()
-                }
+                        addJournal.toggle()
+                    }, label: {
+                        Text("Add")
+                    }
                 )
+                .sheet(isPresented: $addJournal) {
+                    JournalNotesView(viewModel)
+                    }
+                )
+                .onAppear {
+                    viewModel.fetchJournals(session)
+                }
         }
     }
 }
@@ -35,5 +41,6 @@ struct JournalingView: View {
 struct JournelingView_Previews: PreviewProvider {
     static var previews: some View {
         JournalingView()
+            .environmentObject(APIServiceManager())
     }
 }
