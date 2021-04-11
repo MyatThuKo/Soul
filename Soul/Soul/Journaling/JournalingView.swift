@@ -12,31 +12,21 @@ struct JournalingView: View {
     @State private var journalNotes = ""
     @State private var showFullTextField = false
     
+    @State private var addJournal = false
+    
     // MARK: - BODY
     var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: "note.text")
-                Text("Notes")
-                Spacer()
-                Button(action: {
-                    self.showFullTextField.toggle()
+        NavigationView {
+            Text("Journaling view")
+                .navigationBarItems(trailing: Button(action: {
+                    addJournal.toggle()
                 }, label: {
-                    Image(systemName: "arrow.up.forward")
+                    Text("Add")
                 })
-                .sheet(isPresented: $showFullTextField) {
+                .sheet(isPresented: $addJournal) {
                     JournalNotesView()
                 }
-            }
-            
-            TextField("Add notes...", text: $journalNotes)
-                .padding(.horizontal)
-                .frame(height: 50)
-                .background(
-                    Color.blue
-                        .opacity(0.5)
                 )
-                .clipShape(Capsule())
         }
     }
 }
@@ -45,7 +35,5 @@ struct JournalingView: View {
 struct JournelingView_Previews: PreviewProvider {
     static var previews: some View {
         JournalingView()
-            .previewLayout(.sizeThatFits)
-            .padding()
     }
 }

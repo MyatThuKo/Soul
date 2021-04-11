@@ -22,7 +22,7 @@ struct JournalNotesView: View {
         NavigationView {
             VStack {
                 TextField("Add Title...", text: $titleText)
-                    .padding(.horizontal)
+                    .padding()
                 
                 ZStack(alignment: .topLeading) {
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
@@ -36,14 +36,21 @@ struct JournalNotesView: View {
                     }
                     
                     TextEditor(text: $noteText)
-                        .padding(4)
+                        .padding(.horizontal)
                     
                 } //: ZStack
                 .frame(height: 300)
                 .font(.body)
+                .padding()
+                
+                VStack {
+                    Text("How are you today?")
+                    MoodViews()
+                }
                 
                 Spacer()
             } //: VStack
+            .navigationBarTitle("Add New Notes", displayMode: .inline)
             .navigationBarItems(trailing:
                                     Button(action: {
                                         presentationMode.wrappedValue.dismiss()

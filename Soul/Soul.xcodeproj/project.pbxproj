@@ -22,6 +22,7 @@
 		5BF3190A2622583C0011AD56 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF319092622583C0011AD56 /* ChartView.swift */; };
 		E214285026223E7500FA8B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E214284F26223E7500FA8B5E /* GoogleService-Info.plist */; };
 		E27B1B55262275170085E553 /* JournalNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B54262275170085E553 /* JournalNotesView.swift */; };
+		E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B1B5A262280AA0085E553 /* MoodViews.swift */; };
 		E2BC5A9D26223C5F0076DD63 /* SoulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */; };
 		E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5A9E26223C5F0076DD63 /* ContentView.swift */; };
 		E2BC5AA126223C600076DD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC5AA026223C600076DD63 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		96497BBF4C491EDDE3F2F3A3 /* Pods-Soul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soul.release.xcconfig"; path = "Target Support Files/Pods-Soul/Pods-Soul.release.xcconfig"; sourceTree = "<group>"; };
 		E214284F26223E7500FA8B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E27B1B54262275170085E553 /* JournalNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNotesView.swift; sourceTree = "<group>"; };
+		E27B1B5A262280AA0085E553 /* MoodViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViews.swift; sourceTree = "<group>"; };
 		E2BC5A9926223C5F0076DD63 /* Soul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC5A9C26223C5F0076DD63 /* SoulApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulApp.swift; sourceTree = "<group>"; };
 		E2BC5A9E26223C5F0076DD63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E27B1B59262280A20085E553 /* Moods */ = {
+			isa = PBXGroup;
+			children = (
+				E27B1B5A262280AA0085E553 /* MoodViews.swift */,
+			);
+			path = Moods;
+			sourceTree = "<group>";
+		};
 		E2BC5A9026223C5F0076DD63 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +223,7 @@
 		E2BC5A9B26223C5F0076DD63 /* Soul */ = {
 			isa = PBXGroup;
 			children = (
+				E27B1B59262280A20085E553 /* Moods */,
 				5BF319082622582B0011AD56 /* ChartView */,
 				5BF319002622576D0011AD56 /* Journaling */,
 				5BF318FF262257670011AD56 /* Settings */,
@@ -364,6 +375,7 @@
 				53E1579226226A23006EE297 /* RegisterView.swift in Sources */,
 				5BF318F6262253160011AD56 /* String+Extension.swift in Sources */,
 				5BF31902262257830011AD56 /* SettingsView.swift in Sources */,
+				E27B1B5B262280AA0085E553 /* MoodViews.swift in Sources */,
 				5BF3189626224A480011AD56 /* User.swift in Sources */,
 				53E1578C26225923006EE297 /* TextFieldView.swift in Sources */,
 				E2BC5A9F26223C5F0076DD63 /* ContentView.swift in Sources */,
