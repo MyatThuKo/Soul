@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct JournalListView: View {
+    
     @ObservedObject var viewModel: JournalViewModel
     
     @ViewBuilder

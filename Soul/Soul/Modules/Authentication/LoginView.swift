@@ -16,7 +16,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .leading) {
-                Color("background-color")
+                Color.background
                     .ignoresSafeArea(.all)
                 VStack {
                     // MARK: - HEAD
@@ -45,7 +45,7 @@ struct LoginView: View {
                     VStack(spacing: 0) {
                         
                         HStack {
-                            Text("Dont have an account?")
+                            Text("Don't have an account?")
                                 .foregroundColor(Color(.systemGray2))
                                 .font(.system(size: 17,weight: .bold, design: .rounded))
                             NavigationLink(destination: RegisterView()) {
@@ -67,7 +67,7 @@ struct LoginView: View {
                                 .frame(width: 345, height: 64, alignment: .center)
                                 .cornerRadius(17)
                         )
-                        .foregroundColor(Color("background-color"))
+                        .foregroundColor(Color.background)
                     }//: VSTACK
                 }//: VSTACK
             }//: ZSTACK

@@ -26,6 +26,7 @@ struct JournalNotesView: View {
         NavigationView {
             VStack {
                 TextField("Add Title...", text: $viewModel.titleText)
+                    .font(.system(size: 26, weight: .heavy, design: .rounded))
                     .padding()
                 
                 ZStack(alignment: .topLeading) {
@@ -34,6 +35,7 @@ struct JournalNotesView: View {
                     
                     if viewModel.noteText.isEmpty {
                         Text("Add notes...")
+                            .font(.system(size: 20, weight: .heavy, design: .rounded))
                             .foregroundColor(Color(UIColor.placeholderText))
                             .padding(.horizontal)
                             .padding(.vertical)
@@ -41,11 +43,13 @@ struct JournalNotesView: View {
                     
                     TextEditor(text: $viewModel.noteText)
                         .padding(.horizontal)
+                        .font(.system(size: 20, weight: .semibold, design: .rounded))
                     
                 } //: ZStack
                 .frame(height: 300)
                 .font(.body)
-                .padding()
+                .padding(.horizontal, 22)
+                .padding(.vertical, 14)
                 
                 VStack {
                     Text("How are you today?")
@@ -58,6 +62,8 @@ struct JournalNotesView: View {
                     })
                     .sheet(isPresented: $showCalendar) {
                         CalendarView()
+                            .padding(20)
+//                            .accentColor(.orange)
                     }
                 }
                 
@@ -84,5 +90,6 @@ struct JournalNotesView: View {
 struct JournalNotesView_Previews: PreviewProvider {
     static var previews: some View {
         JournalNotesView(JournalViewModel())
+            .preferredColorScheme(.dark)
     }
 }

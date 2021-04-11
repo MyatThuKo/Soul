@@ -9,10 +9,10 @@ import SwiftUI
 
 struct RegisterView: View {
     // MARK: - PROPERTIES
-    
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var session: APIServiceManager
     @ObservedObject var viewModel = AuthenticationViewModel()
+    
     // MARK: - BODY
     var body: some View {
             ZStack(alignment: .leading) {
@@ -72,7 +72,7 @@ struct RegisterView: View {
                                 .frame(width: 345, height: 64, alignment: .center)
                                 .cornerRadius(17)
                         )
-                        .foregroundColor(Color("background-color"))
+                        .foregroundColor(Color.background)
                         .navigationBarHidden(true)
                     }//: VSTACK
                 }//: VSTACK
