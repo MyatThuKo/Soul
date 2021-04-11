@@ -16,7 +16,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .leading) {
-                Color("background-color")
+                Color.background
                     .ignoresSafeArea(.all)
                 VStack {
                     // MARK: - HEAD
@@ -67,7 +67,7 @@ struct LoginView: View {
                                 .frame(width: 345, height: 64, alignment: .center)
                                 .cornerRadius(17)
                         )
-                        .foregroundColor(Color("background-color"))
+                        .foregroundColor(Color.background)
                     }//: VSTACK
                 }//: VSTACK
             }//: ZSTACK

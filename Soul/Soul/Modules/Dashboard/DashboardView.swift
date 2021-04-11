@@ -11,12 +11,11 @@ struct DashboardView: View {
     // MARK: - PROPERTIES
     @State var selectedIndex = 0
     
-    let tabBarImages = ["chart.bar.fill", "person.fill.questionmark", "gearshape"]
+    let tabBarImages = ["chart.bar.fill", "pencil", "gearshape"]
     
     // MARK: - BODY
     var body: some View {
         GeometryReader { geometry in
-            
             VStack(spacing: 0) {
                 switch selectedIndex {
                 case 0:

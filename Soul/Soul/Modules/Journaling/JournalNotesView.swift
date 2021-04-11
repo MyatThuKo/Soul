@@ -32,6 +32,7 @@ struct JournalNotesView: View {
                     
                     if viewModel.noteText.isEmpty {
                         Text("Add notes...")
+                            .font(.system(size: 20, weight: .heavy, design: .rounded))
                             .foregroundColor(Color(UIColor.placeholderText))
                             .padding(.horizontal)
                             .padding(.vertical)

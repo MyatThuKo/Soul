@@ -72,7 +72,7 @@ struct RegisterView: View {
                                 .frame(width: 345, height: 64, alignment: .center)
                                 .cornerRadius(17)
                         )
-                        .foregroundColor(Color("background-color"))
+                        .foregroundColor(Color.background)
                         .navigationBarHidden(true)
                     }//: VSTACK
                 }//: VSTACK
