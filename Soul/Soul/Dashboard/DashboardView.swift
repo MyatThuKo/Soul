@@ -10,33 +10,27 @@ import SwiftUI
 struct DashboardView: View {
     var body: some View {
         TabView {
-            NavigationView {
-                ChartView()
-            }
-            .tabItem {
-                Image(systemName: "chart.bar.fill")
-                Text("Quiz")
-                    .font(.system(size: 12, weight: .light, design: .rounded))
-            }
-            NavigationView {
-                JournelingView()
-            }
-            .tabItem {
-                Image(systemName: "person.fill.questionmark")
-                Text("Quiz")
-                    .font(.system(size: 12, weight: .light, design: .rounded))
-            }
-            NavigationView {
-                SettingsView()
-            }
-            .tabItem {
-                Image(systemName: "gearshape")
-                Text("Settings")
-                    .font(.system(size: 12, weight: .light, design: .rounded))
-            }
-
+            ChartView()
+                .tabItem {
+                    Image(systemName: "chart.bar.fill")
+                    Text("Quiz")
+                        .font(.system(size: 12, weight: .light, design: .rounded))
+                }
+            JournalingView()
+                .tabItem {
+                    Image(systemName: "person.fill.questionmark")
+                    Text("Quiz")
+                        .font(.system(size: 12, weight: .light, design: .rounded))
+                }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gearshape")
+                    Text("Settings")
+                        .font(.system(size: 12, weight: .light, design: .rounded))
+                }
+            
         }
-    
+        
     }
 }
 
