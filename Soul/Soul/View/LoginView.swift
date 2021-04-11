@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     // MARK: - PROPERTIES
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @EnvironmentObject var session: APIServiceManager
+    @ObservedObject var viewModel = AuthenticationViewModel()
     
     // MARK: - BODY
     var body: some View {
@@ -33,7 +33,10 @@ struct LoginView: View {
                     Spacer()
                     
                     // MARK: - TEXT FIELD
-                    TextFieldView(email: $email, password: $password)
+                    TextFieldView(
+                        email: $viewModel.email,
+                        password: $viewModel.password
+                    )
                         .padding()
                     
                     Spacer()
@@ -53,7 +56,7 @@ struct LoginView: View {
                         }//: HSTACK
                         
                         Button(action: {
-                            // SIGN IN ACTION
+                            viewModel.buttonAction(session: session, register: false)
                         }, label: {
                             Text("Sign In")
                                 .font(.system(size: 19, weight: .bold, design: .rounded))

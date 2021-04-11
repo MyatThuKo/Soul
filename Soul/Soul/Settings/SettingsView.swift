@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var session: APIServiceManager
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                Label("Signout", systemImage: "power")
+                    .onTapGesture {
+                        session.logout()
+                    }
+            }
+            .listStyle(SidebarListStyle())
+            .navigationTitle("Settings")
+        }
     }
 }
 

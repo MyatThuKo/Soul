@@ -34,9 +34,8 @@ class APIServiceManager: ObservableObject {
     func login(email: String, password: String, handler: @escaping(Result<Bool, APIError>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { response, error in
             if let user = response?.user,
-               let email = user.email,
-               let displayName = user.displayName {
-                self.user = User(uid: user.uid, email: email, userName: displayName)
+               let email = user.email {
+                self.user = User(uid: user.uid, email: email, userName: user.displayName ?? "")
                 self.isLoggedIn = true
                 handler(.success(true))
             } else {
@@ -68,9 +67,8 @@ class APIServiceManager: ObservableObject {
     func register(email: String, password: String, handler: @escaping(Result<Bool, APIError>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { response, error in
             if let user = response?.user,
-               let email = user.email,
-               let displayName = user.displayName {
-                self.user = User(uid: user.uid, email: email, userName: displayName)
+               let email = user.email {
+                self.user = User(uid: user.uid, email: email, userName: user.displayName ?? "")
                 self.isLoggedIn = true
                 handler(.success(true))
             } else {

@@ -11,10 +11,8 @@ struct RegisterView: View {
     // MARK: - PROPERTIES
     
     @Environment(\.presentationMode) var presentation
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    
+    @EnvironmentObject var session: APIServiceManager
+    @ObservedObject var viewModel = AuthenticationViewModel()
     // MARK: - BODY
     var body: some View {
             ZStack(alignment: .leading) {
@@ -48,8 +46,11 @@ struct RegisterView: View {
                     Spacer()
                     
                     // MARK: - TEXT FIELD
-                    TextFieldView(email: $email, password: $password)
-                        .padding()
+                    TextFieldView(
+                        email: $viewModel.email,
+                        password: $viewModel.password
+                    )
+                    .padding()
                     
                     Spacer()
                     
@@ -63,7 +64,7 @@ struct RegisterView: View {
                         .foregroundColor(Color("background-color"))
                         
                         Button(action: {
-                            // SIGN UP ACTION
+                            viewModel.buttonAction(session: session, register: true)
                         }, label: {
                             Text("Create Account")
                                 .font(.system(size: 19, weight: .bold, design: .rounded))

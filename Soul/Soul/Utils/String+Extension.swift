@@ -10,7 +10,16 @@ import SwiftUI
 
 // MARK: - STRING
 extension String {
-     public func localized(with value: String = "") -> String {
-        return String(format: NSLocalizedString(self, comment: "" ), value)
+     
+    var isValidEmail: Bool {
+        NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
     }
+
+    var isValidPassword: Bool {
+        NSPredicate(format: "SELF MATCHES %@", "[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<,:;~`’]{6,}$").evaluate(with: self)
+    }
+    
+    public func localized(with value: String = "") -> String {
+       return String(format: NSLocalizedString(self, comment: "" ), value)
+   }
 }
