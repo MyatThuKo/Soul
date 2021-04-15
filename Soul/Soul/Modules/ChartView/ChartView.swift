@@ -60,6 +60,9 @@ struct ChartView: View {
                             ForEach(0..<5) { item in
                                 RoundedRectangle(cornerRadius: 20)
                                     .frame(width: 240, height: 160, alignment: .center)
+                                    .foregroundColor(.white)
+                                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 10, x: 0.0, y: 0.0)
+                                    .padding(.vertical, 20)
                             }
                         }
                     })
