@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Soul
+
+  Created by Aswani G on 4/10/21.
+  
+*/
+
+// MARK: - API Error Messages
+"service.response.session.error" = "Please try again! ";
+"service.response.api.error" = "API error - ";
+"service.response.parsing.error" =  "Parsing error";
+"service.response.missing.data.error" = "Missing data error";
+"service.request.error" = "Error in request";
+"service.request.internal.server.error" = "Internal server error.";
+"service.request.try.again" = "No internet connection. Please try again!";
+"service.request.session.timeout" = "Session timeout.";
+"service.request.page.not.found" = "Page not found.";
+"error.profile.not.updated.title" = "Profile not updated, try again";
+"error.profile.user.name.not.exists" = "User name already exists";
